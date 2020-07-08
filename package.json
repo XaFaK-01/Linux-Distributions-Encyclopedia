@@ -1,0 +1,23 @@
+{
+  "name": "linux-distributions-encyclopedia",
+  "version": "1.0.0",
+  "description": "A web app through which you can get to know about various popular GNU/Linux distributions",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "XaFaK",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "superagent": "^5.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

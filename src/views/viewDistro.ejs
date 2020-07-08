@@ -1,0 +1,75 @@
+<%- include('partials/header.ejs') %> <% let imageLink =
+"https://linux-distro-dictionary-api.herokuapp.com/distros/" + distro.name +
+"/logo" %> <% let altImgTxt = distro.name + " logo"%> <% let descriptionQuestion
+= "Description: "%> <% let latestVersionQuestion = "Latest version: " %> <% let
+basedOn = "Based on: "%> <% let kernelVersion = "Latest kernel version: " %> <%
+let whatPackageManager = "Package manager: " %> <% let backedBy = "Supported"+
+"by: " %> <% let defaultDesktopEnvironment = "Default desktop environment: " %>
+<% let releaseCycle = "Release cycle: " %> <% let complexityLevel = "Complexity"
++ " level: "%> <% let officialSiteLink = "Official site link: " %>
+<div class="detail-first-div">
+  <div class="container-fluid distroDetailContainer">
+    <div class="row">
+      <div class="col-lg-6 distro-logo-col">
+        <img
+          class="viewDistro-img"
+          src="<%= imageLink%>"
+          alt="<%= altImgTxt%>"
+        />
+        <h1 class="viewDistro-h1"><%= distro.name %></h1>
+      </div>
+
+      <div class="col-lg-6 distro-details-col">
+        <p class="answerValue">
+          <span class="propertyKey"><%= descriptionQuestion %> </span> <%=
+          distro.description %>
+        </p>
+
+        <p class="answerValue">
+          <span class="propertyKey"><%= latestVersionQuestion %> </span> <%=
+          distro.latestVersion %>
+        </p>
+
+        <p class="answerValue">
+          <span class="propertyKey"><%= basedOn %> </span> <%= distro.basedOn %>
+        </p>
+
+        <p class="answerValue">
+          <span class="propertyKey"><%= kernelVersion %> </span> <%=
+          distro.kernel %>
+        </p>
+
+        <p class="answerValue">
+          <span class="propertyKey"><%= whatPackageManager %> </span> <%=
+          distro.packageManager %>
+        </p>
+
+        <p class="answerValue">
+          <span class="propertyKey"><%= backedBy %> </span><%= distro.backedBy
+          %>
+        </p>
+
+        <p class="answerValue">
+          <span class="propertyKey"><%= defaultDesktopEnvironment %> </span> <%=
+          distro.defaultDesktopEnvironment %>
+        </p>
+
+        <p class="answerValue">
+          <span class="propertyKey"><%= releaseCycle %> </span> <%=
+          distro.releaseType %>
+        </p>
+
+        <p class="answerValue">
+          <span class="propertyKey"><%= complexityLevel %> </span><%=
+          distro.complexityLevel %>
+        </p>
+
+        <p class="answerValue">
+          <span class="propertyKey"><%= officialSiteLink %> </span
+          ><a href="<%= distro.officialSite %>"><%= distro.officialSite %></a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <%- include('partials/footer.ejs') %>
+</div>
