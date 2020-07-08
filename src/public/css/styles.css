@@ -81,7 +81,12 @@ body {
 /* Media query for mobile view port */
 @media (max-width: 991.98px) {
   .navbar-brand {
-   font-size: 18.5px; 
+   font-size: 14.1px; 
+  }
+
+  .navbar-light{
+    padding-left: 8px;
+    padding-right: 8px;
   }
   .form-inline{
     display: flex;
@@ -108,7 +113,7 @@ body {
     font-size: 15px;
   }
   .fab{
-    font-size: 15px;
+    font-size: 1.2rem;
     margin: 10px;
   }
   .detail-first-div {
@@ -292,4 +297,5 @@ a:hover {
   font-weight: 800;
   font-family: "Raleway", sans-serif;
   margin: 0;
+  font-size: 1.2rem;
 }
