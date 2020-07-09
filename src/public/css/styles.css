@@ -6,7 +6,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   background-image: linear-gradient(to right, #3e5151, #decba4);
-  font-family: "Raleway", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 800;
   text-align: center;
 }
@@ -146,10 +146,10 @@ body {
 
 .heading-paragraph {
  
-  font-weight: 800;
+  /* font-weight: 800; */
   width: 70vw;
   margin: 0 auto;
-  font-family: "Caveat", cursive;
+  font-family: 'Raleway', sans-serif;
   color: linear-gradient(to right, #3e5151, #decba4);
 }
 
@@ -253,6 +253,7 @@ a:hover {
 
 .about-page-paragraph {
   /* padding: 20px; */
+  font-family: 'Raleway', sans-serif;
 }
 
 .about-information{

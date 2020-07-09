@@ -9,9 +9,9 @@ var _ = require("lodash");
 var string = require("lodash/string");
 
 const welcomeStartingContent =
-  "Find information regarding some of the latest and greatest Linux Distributions. Join the world of Free and Open Source Software by finding the Linux Distribution that best suites for your needs.";
+  "Find information regarding some of the latest and greatest GNU/Linux Distributions. Join the world of Free and Open Source Software by finding the perfect GNU/Linux Distribution best suites for your needs.";
 const aboutContent =
-  "Linux Distributions are various flavors of GNU/Linux Operating System. Each Linux Distribution have its own or inherited package manager, desktop environment, release type, backed community and various tools. Through this website you can find the perfect GNU/Linux distribution for your needs.";
+  "GNU/Linux Distributions are various flavors of GNU/Linux Operating System. Each GNU/Linux Distribution have its own or inherited package manager, desktop environment, release type, backed community and various tools. Through this website you can find the perfect GNU/Linux distribution for your requirements.";
 const app = express();
 var path = require("path");
 app.set("view engine", "ejs"); //by defining this line the res.render() will directly go into that folder to search for home
