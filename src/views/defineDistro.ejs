@@ -1,0 +1,124 @@
+<%- include('partials/header.ejs') %>
+<h1 class="heading">Define a new GNU/Linux Distribution!</h1>
+<p class="heading-paragraph"><%= defineNewDistroContent %></p>
+
+<img class="tux-minimalistic-logo" src="/images/Gnu-linux-minimalistic-logo.png"
+  alt="Gnu-linux-minimalistic-logo.png" />
+<div class="user-data-entry">
+  <div class="form-data">
+    <form method="POST" action="/postData" enctype="multipart/form-data">
+      <div class="form-row">
+        <div class="form-group col-lg-6">
+          <small id="distroNameHelp" class="form-text">Type in the correct distro name.</small>
+          <input name="name" required type="text" class="form-control" id="distroname"
+            placeholder="GNU/Linux Distribution Name" />
+        </div>
+        <div class="form-group col-lg-6">
+          <small id="distroDescriptionHelp" class="form-text">Make the description as short as possible</small>
+          <textarea name="description" required class="form-control" id="distroDescription" rows="2"
+            placeholder="GNU/Linux Distribution Description"></textarea>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-lg-6">
+          <small id="distroLatestVersionHelp" class="form-text">Type the latest version available</small>
+          <input name="latestVersion" required type="text" class="form-control" id="distroLatestVersion"
+            placeholder="GNU/Linux Distribution Version" />
+        </div>
+        <div class="form-group col-lg-6">
+          <small id="distroBasedOnHelp" class="form-text">Type in the name of the GNU/Linux Distributions it's based on
+            or
+            independent</small>
+          <input name='basedOn' required type="text" class="form-control" id="GNU/Linux Distribution Based on"
+            placeholder="Based on" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-lg-6">
+          <small id="distroLatestKernelVersionHelp" class="form-text">Type in the name of latest kernel version</small>
+          <input name='kernel' required type="text" class="form-control" id="distroLatestKernelVersion"
+            placeholder="Latest kernel version" />
+        </div>
+        <div class="form-group col-lg-6">
+          <small id="distroPackageManagerHelp" class="form-text">Type the name of the package manager</small>
+          <input name='packageManager' required type="text" class="form-control" id="distroPackageManager"
+            placeholder="Package manager name" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-lg-6">
+          <small id="distroSupportedByHelp" class="form-text">Type the name of the organization that supports this
+            distribution</small>
+          <input name='backedBy' required type="text" class="form-control" id="distroSupportedBy"
+            placeholder="Supported By" />
+        </div>
+        <div class="form-group col-lg-6">
+          <small id="distroDEHelp" class="form-text">Type the name of the default desktop environment</small>
+          <input name='defaultDesktopEnvironment' required type="text" class="form-control" id="distroDE"
+            placeholder="Default Desktop Environment" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-lg-6">
+          <small id="distroOfficialLinkHelp" class="form-text">Select the release cycle of current GUN/Linux
+            Distribution</small>
+
+          <select name="releaseType" class="form-control" id="distroReleaseType" required>
+            <option selected disabled value="">Choose release cycle</option>
+            <option>Standard Release</option>
+            <option>Standard Release with LTS</option>
+            <option>Rolling Release</option>
+          </select>
+        </div>
+        <div class="form-group col-lg-6">
+          <small class="form-text">Select the complexity level of current GNU/Linux
+            Distribution</small>
+          <select name="complexityLevel" required class="form-control" id="distroComplexity">
+            <option selected disabled value="">Select complexity level</option>
+            <option>Beginner</option>
+            <option>Experienced</option>
+            <option>Advanced</option>
+            <option>Master</option>
+          </select>
+        </div>
+
+
+      </div>
+      <div class="form-row">
+        <div class="form-group col-lg-6">
+          <small class="form-text">Official website for GNU/Linux Distribution</small>
+          <input name="officialSite" required type="url" class="form-control" id="distroOfficialLink"
+            placeholder="GNU/Linux Official Link" />
+        </div>
+        <div class="form-group col-lg-6">
+          <small class="form-text">Upload current GNU/Linux distribution logo</small>
+          <input type="file" name="logo" accept="image/*" />
+
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-lg-6">
+          <small id="userNameHelp" class="form-text">Type in your name it (would be displayed with card)</small>
+          <input name="postedBy" required type="text" class="form-control" id="userName"
+            placeholder="Please type in your name" />
+        </div>
+        <div class="form-group col-lg-6">
+          <small class="form-text">Upload your photo, it will be shown along side card (Optional)</small>
+          <input type="file" name="userProfilePicture" accept="image/*" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col">
+          <button class="btn btn-secondary btn-lg btn-block" type="submit">Submit form</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- <%- include('partials/footer.ejs') %> -->

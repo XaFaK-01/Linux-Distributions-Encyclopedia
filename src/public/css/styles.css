@@ -6,7 +6,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   background-image: linear-gradient(to right, #3e5151, #decba4);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 800;
   text-align: center;
 }
@@ -20,6 +20,7 @@ body {
 .navbar-brand {
   font-family: "Noto Sans JP", sans-serif;
 }
+
 .form-inline .form-control {
   width: 14rem;
 }
@@ -27,130 +28,189 @@ body {
 .navbar-light {
   background-image: linear-gradient(to right, #3e5151, #ffd89b);
 }
+
 .introductory-div {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
+
 .tux-logo {
   width: 30px;
   margin-right: 5px;
 }
 
-
 /* Media query for desktop view port */
 @media (min-width: 991.98px) {
-  .introductory-div{
+  .introductory-div {
     padding: 10px 30px;
   }
-  .heading{
+
+  .heading {
+    margin-top: 30px;
     font-size: 4rem;
   }
-  .heading-paragraph{
-    font-size: 1.9vw;
-  }
-  .card-box{
-    margin: 40px 50px;
+
+  .heading-paragraph {
+    width: 70vw;
+    margin: 0 auto;
+    font-size: 1.5vw;
   }
 
-  .logo-img{
-    margin-top: 30px;
+  .card-box {
+    margin: 40px 50px 80px;
   }
+
+  .logo-img {
+    /* margin-top: 20px; */
+    padding: 10px 0 30px;
+
+  }
+
   .footer-div {
     height: 7rem;
   }
-  .developer-name{
+
+  .developer-name {
     font-size: 1.5rem;
   }
-  .fab{
+
+  .fab {
     font-size: 1.8rem;
     margin: 20px;
   }
+
   .detail-first-div {
     margin: 2rem auto 0;
     width: 70%;
   }
+
   .viewDistro-img {
+    width: 50%;
     margin-bottom: 18px;
   }
+
   .distro-details-col {
     padding: 20px;
   }
-  
+
+  .tux-minimalistic-logo {
+    width: 15rem;
+    margin: 20px auto 0;
+  }
+
+  .user-data-entry {
+    width: 65%;
+    padding: 9rem 20px 2rem;
+    margin: -9rem auto 6rem;
+  }
+
+  .about-information {
+    padding: 3rem;
+  }
 }
 
 /* Media query for mobile view port */
 @media (max-width: 991.98px) {
   .navbar-brand {
-   font-size: 14.1px; 
+    font-size: 14.1px;
   }
 
-  .navbar-light{
+  .navbar-light {
     padding-left: 8px;
     padding-right: 8px;
   }
-  .form-inline{
+
+  .form-inline {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .introductory-div{
+
+  .introductory-div {
     padding: 10px 17px;
   }
-  .heading{
-    font-size: 3.5rem;
+
+  .heading {
+    margin-top: 10px;
+    font-size: 2.7rem;
   }
 
-  .heading-paragraph{
-    font-size: 1.9rem;
+  .heading-paragraph {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.2rem;
   }
-  .card-box{
-    margin: 15px 17px;
+
+  .card-box {
+    margin: 15px 17px 75px;
   }
-  .logo-img{
-    margin-top: 50px;
+
+  .logo-img {
+    margin: 50px 0 40px
   }
-  .developer-name{
+
+  .developer-name {
     font-size: 15px;
   }
-  .fab{
+
+  .fab {
     font-size: 1.2rem;
     margin: 10px;
   }
+
   .detail-first-div {
     margin: 40px auto 60px;
     padding: 20px;
     width: 90%;
   }
+
   .viewDistro-img {
     width: 50%;
     margin: 20px;
   }
+
   .distro-details-col {
     padding: 10px 40px;
   }
-  .developer-col{
+
+  .developer-col {
     order: 0;
   }
-  .about-information{
+
+  .about-information {
     order: 1;
+  }
+
+  .tux-minimalistic-logo {
+    width: 8.5rem;
+    margin: 20px auto 0;
+  }
+
+  .user-data-entry {
+    width: 90%;
+    padding: 7rem 20px 1rem;
+    margin: -6rem auto 30px;
+  }
+
+  .about-page-paragraph {
+    font-size: 1.2rem;
+  }
+
+  .about-information {
+    padding: 2rem;
   }
 }
 
 /* <===== Heading and first paragraph =====> */
 
 .heading {
-  margin-top: 30px;
+
   text-align: center;
   font-family: "Galada", cursive;
 }
 
 .heading-paragraph {
- 
-  /* font-weight: 800; */
-  width: 70vw;
-  margin: 0 auto;
-  font-family: 'Raleway', sans-serif;
-  color: linear-gradient(to right, #3e5151, #decba4);
+  font-family: "Raleway", sans-serif;
 }
 
 /* <===== Linux distro cards =====>  */
@@ -158,13 +218,11 @@ body {
 .cards {
   margin: 20px 0 50px;
 }
+
 .card-box {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 0;
- 
-}
-
-.distro-card {
+  min-width: 20rem;
   border-image-slice: 1;
   border-top: 7px solid transparent;
   border-radius: 7px;
@@ -172,8 +230,15 @@ body {
     linear-gradient(to right, #403b4a, #e7e9bb);
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
-
+  position: relative
 }
+
+.card-box:hover {
+  cursor: pointer;
+}
+
+.distro-card {}
+
 .distro-name-first-div {
   height: 60px;
   padding: 20px;
@@ -183,68 +248,72 @@ body {
   font-family: "Exo", sans-serif;
   font-size: 2rem;
 }
+
 .text-muted {
   font-size: small;
 }
 
-.card-box:hover {
-  cursor: pointer;
-}
+
 
 .distro-name-last-div {
   background-image: linear-gradient(to right, #3c3b3f, #605c3c);
   width: 100%;
   padding: 10px;
+  position: absolute;
+  bottom: -20px;
+  text-align: left;
 }
 
 .container-logo {
-  margin: 10px auto 20px;
-  display: flex;
+  margin: 40px auto 20px;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 
 .logo-img {
   width: 50%;
-
 }
 
 .text-mute {
   display: block;
   color: white;
+  text-align: center;
 }
+
 a {
   color: #212529;
   font-weight: 800;
   text-decoration: none !important;
 }
+
 a:hover {
   color: #decba4;
   text-decoration: none !important;
   cursor: pointer;
 }
+
 /* <===== viewDistro/*distroName* =====>  */
 
 .detail-first-div {
- 
   text-align: center;
   border-radius: 1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
 .distro-logo-col {
   margin: auto;
 }
-
 
 .propertyKey {
   font-weight: 900;
   font-size: 1.4rem;
 }
+
 .answerValue {
   font-size: 1.1rem;
 }
+
 .viewDistro-h1 {
   font-weight: 900;
 }
@@ -252,28 +321,27 @@ a:hover {
 /* <===== About Page =====> */
 
 .about-page-paragraph {
-  /* padding: 20px; */
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
-.about-information{
-  padding: 3rem;
+.about-information {
   font-family: "Caveat", cursive;
-  font-size: 1.8rem
+  font-size: 1.8rem;
 }
 
 .developer-photo {
   width: 40%;
   margin-top: 30px;
 }
-.developer_name{
-  font-family: 'Caveat', cursive;
+
+.developer_name {
+  font-family: "Caveat", cursive;
 
   margin-top: 10px;
   font-weight: 800px;
   font-size: 3rem;
-
 }
+
 /* <===== Footer =====> */
 
 #page-container {
@@ -282,9 +350,8 @@ a:hover {
 }
 
 #content-wrap {
-  padding-bottom: 2.5rem;    /* Footer height */
+  padding-bottom: 2.5rem;
 }
-
 
 .footer-div {
   background-image: linear-gradient(to right, #3e5151, #ffd89b);
@@ -294,9 +361,65 @@ a:hover {
   bottom: 0;
   width: 100%;
 }
+
 .developer-name {
   font-weight: 800;
   font-family: "Raleway", sans-serif;
   margin: 0;
   font-size: 1.2rem;
+}
+
+
+/* <===== Define a distro form =====> */
+
+
+
+.user-data-entry {
+  text-align: left;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-text {
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.btn-secondary {
+  background-color: #3e5151;
+}
+
+.btn-secondary:hover {
+  color: black;
+  background-color: #ffd89b;
+}
+
+
+/* +=============== */
+
+
+.user-picture {
+  width: 5.5rem;
+  margin-bottom: -77px;
+  position: relative;
+  bottom: 4.2rem;
+  margin-top: 0rem;
+}
+
+.posted-by {
+  color: aliceblue;
+  font-size: 12px;
+}
+
+
+/* ========== */
+
+.about-page-content {
+  margin: 30px 0;
+}
+
+.holder-div {
+  margin: 3rem auto 0;
+  width: 50%;
 }
