@@ -11,4 +11,5 @@ Git clone the project.<br/>
 Make sure that Node.js and NPM is installd on your system.<br/>
 Extract and open the extracted directory.<br/>
 Use the "npm i" command to install all the required npm modules.<br/>
-And now you can finally view the project by using the npm script "npm run dev" to run the project locally on port 3000.<br/>
+Define the required environment variables.<br/>
+And now you can finally view the project by using the npm script "npm run dev" to run the project locally on your defined port.<br/>
