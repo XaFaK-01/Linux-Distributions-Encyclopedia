@@ -61,7 +61,7 @@ body {
   }
 
   .logo-img {
-    /* margin-top: 20px; */
+    margin: 1.5rem 0 2rem;
     padding: 10px 0 30px;
 
   }
@@ -80,7 +80,7 @@ body {
   }
 
   .detail-first-div {
-    margin: 2rem auto 0;
+    margin: 2rem auto 8rem;
     width: 70%;
   }
 

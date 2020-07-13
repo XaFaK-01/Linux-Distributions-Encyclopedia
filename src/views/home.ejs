@@ -6,32 +6,32 @@
 
 <div class="container-fluid">
   <div class="row justify-content-between cards">
-    <% distros.forEach(distro => { %>
-    <% let imageLink = "http://lde-main.herokuapp.com/distros/" + distro.name + "/logo" %>
-    <% let creationDate = ""+ distro.createdAt.slice(0,10) %>
-    <% let updateDate = ""+ distro.updatedAt.slice(0,10) %>
-    <% let hrefLink = "/viewDistro/" + distro.name %>
-    <% let userImage = "http://lde-main.herokuapp.com/distros/" + distro.name + "/userProfilePicture"  %>
+    <% for( let i = distros.length-1; i>=0; i--) {%>
+    <% let imageLink = "http://lde-main.herokuapp.com/distros/" + distros[i].name + "/logo" %>
+    <% let creationDate = ""+ distros[i].createdAt.slice(0,10) %>
+    <% let updateDate = ""+ distros[i].updatedAt.slice(0,10) %>
+    <% let hrefLink = "/viewDistro/" + distros[i].name %>
+    <% let userImage = "http://lde-main.herokuapp.com/distros/" + distros[i].name + "/userProfilePicture"  %>
 
     <a style="display: inline-block;" class="col-lg-3 card-box" href="<%=hrefLink%>">
       <img class="user-picture" src="<%= userImage %> " alt="user-picture">
 
       <div class="distro-card">
         <div class="distro-name-first-div">
-          <h4 class="distro-name"><%=distro.name%></h4>
+          <h4 class="distro-name"><%=distros[i].name%></h4>
           <span class="text-mute" style="text-align: right; margin-top: 10px;">🕒 <%= creationDate %></span>
         </div>
         <div class="container-logo">
           <img class="logo-img" src="<%=imageLink %>" alt="logo" />
         </div>
         <div class="distro-name-last-div">
-          <span class="text-mute">Supported By: <%=distro.backedBy%> </span>
-          <span class="posted-by">Posted By: <%=distro.postedBy%></span>
+          <span class="text-mute">Supported By: <%=distros[i].backedBy%> </span>
+          <span class="posted-by">Posted By: <%=distros[i].postedBy%></span>
         </div>
       </div>
 
     </a>
 
-    <% }) %> <%- include('partials/footer.ejs') %>
+    <% } %> <%- include('partials/footer.ejs') %>
   </div>
 </div>
