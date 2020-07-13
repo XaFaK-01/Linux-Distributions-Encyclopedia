@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 var multer = require('multer')
 const sharp = require("sharp");
 const https = require('https')
