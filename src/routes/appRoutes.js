@@ -16,7 +16,7 @@ const defineNewDistroContent =
     "You can now define a GNU/Linux distribution here that's not defined yet by filling out the correct information in the below form. Keep in mind that this information will be first verified by admin and then posted.";
 
 const aboutContent =
-    "GNU/Linux Distributions are various flavors of GNU/Linux Operating System. Each GNU/Linux Distribution have its own or inherited package manager, desktop environment, release type, backed community and various tools. Through this website you can find the perfect GNU/Linux distribution for your requirements.";
+    "GNU/Linux Distributions are various flavors of GNU/Linux Operating System. Each GNU/Linux Distribution has its own or inherited package manager, desktop environment, release type, backed community and various tools. Through this website you can find the perfect GNU/Linux distribution for your requirements.";
 
 const url = 'http://lde-main.herokuapp.com/distros';
 let distros = [];
@@ -60,17 +60,18 @@ router.get("/viewDistro/:distroName", (req, res) => {
 router.post("/searchDistro", (req, res) => {
     updateDistrosList();
     const userInput = _.lowerCase(req.body.distroName);
-    distros.forEach((distro) => {
+
+
+    distros.forEach(distro => {
         if (userInput === _.lowerCase(distro.name)) {
-            res.render("viewDistro", {
+            return res.render("viewDistro", {
                 distro
             });
-        } else {
-            res.render('404page', {
-                message: "Sorry could not found that distribution! Why don't you define it and let it be approved and posted?"
-            })
         }
     });
+
+    res.render("distroNotFound")
+
 });
 
 router.get("/defineDistro", (req, res) => {
