@@ -1,97 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GNU/Linux Distributions Encyclopedia</title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="/images/linux-tux-logo.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GNU/Linux Distributions Encyclopedia</title>
 
-    <!-- StyleSheets -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/css/styles.css" />
-    <!-- Google Fonts -->
- 
+  <!-- Favicon -->
+  <link rel="icon" href="/images/linux-tux-logo.png" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Exo:wght@500&family=Inter&family=Montserrat&family=Noto+Sans+JP:wght@900&family=Raleway:wght@200&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <script
-      src="https://kit.fontawesome.com/eeb05e8fa1.js"
-      crossorigin="anonymous"
-    ></script>
+  <!-- StyleSheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <!-- Google Fonts -->
 
-    <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="/">
-          <img
-            class="tux-logo"
-            src="https://i0.wp.com/www.linuxandubuntu.com/wp-content/uploads/2019/07/linux-logo-penguin.png?w=1400"
-            alt=""
-          />Linux Distributions Encyclopedia</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active home-li">
-              <a class="nav-link home-btn" href="/"
-                >Home <span class="sr-only home-btn">(current)</span></a
-              >
-            </li>
-            <li class="nav-item home-li">
-              <a class="nav-link" href="/defineDistro"
-                >Define a new distro <span class="sr-only">(current)</span></a
-              >
-            </li>
-            <li class="nav-item abt-li">
-              <a class="nav-link abt-btn" href="/about"
-                >About<span class="sr-only">(current)</span></a
-              >
-            </li>
-          </ul>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat&family=Exo:wght@500&family=Inter&family=Montserrat&family=Noto+Sans+JP:wght@900&family=Raleway:wght@200&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/eeb05e8fa1.js" crossorigin="anonymous"></script>
 
-          <form
-            class="form-inline my-2 my-lg-0"
-            method="POST"
-            action="/searchDistro"
-          >
-            <input
-              name="distroName"
-              class="form-control mr-sm-2"
-              type="search"
-              placeholder="Search for a linux distro"
-              aria-label="Search"
-            />
-            <button
-              class="btn btn-outline-secondary my-2 my-sm-0"
-              type="submit"
-            >
-              Search
-            </button>
-          </form>
-        </div>
-      </nav>
-    </div>
-  </head>
-  <body>
-    <div id="page-container">
-      <div id='content-wrap'>
-        <div class="container-fluid">
-    
-    
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="/">
+        <img class="tux-logo"
+          src="https://i0.wp.com/www.linuxandubuntu.com/wp-content/uploads/2019/07/linux-logo-penguin.png?w=1400"
+          alt="" />Linux Distributions Encyclopedia</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active home-li">
+            <a class="nav-link home-btn" href="/">Home <span class="sr-only home-btn">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/defineDistro">Define a new distro <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item abt-li">
+            <a class="nav-link abt-btn" href="/about">About<span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+
+        <form class="form-inline my-2 my-lg-0" method="POST" action="/searchDistro">
+          <input name="distroName" class="form-control mr-sm-2" type="search" placeholder="Search for a linux distro"
+            aria-label="Search" />
+          <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </nav>
+  </div>
+</head>
+
+<body>
+  <div id="page-container">
+    <div id='content-wrap'>
+      <div class="container-fluid">

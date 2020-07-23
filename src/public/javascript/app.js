@@ -25,3 +25,9 @@ $(".abt-btn").click(function (e) {
   //   $(".abt-btn").attr("href", "/about");
   window.location.href = "/about";
 });
+
+$('.okay-button').click(function (e) {
+  e.preventDefault();
+  // console.log('button clicked')
+  $('.message-div').addClass('invisible');
+});
